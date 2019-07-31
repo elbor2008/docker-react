@@ -1,0 +1,11 @@
+FROM node:10.9-alpine
+
+WORKDIR /usr/frontend
+
+COPY ./package.json .
+
+RUN npm install
+
+COPY . .
+
+CMD ["npm", "start"]
